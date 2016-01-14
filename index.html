@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Friend Directory</title>
+<link href="css/style.css" rel="stylesheet">
+<script src="js/main.js"></script>
+</head>
+<!-- Body Starts Here -->
+<body id="body" >
+	<div id="container">
+		<div>
+			<input type="button" id="AddFriend" onclick="div_show();" value="Add">
+			<input type="button" id="DeleteFriend" onclick="deleteRows('frnData');" value="Remove">
+		</div>
+		<div id ="tblDiv">
+			<table id="frnData">
+				<thead>
+					<tr><th>Select Row</th>
+						<th>Name</th>
+						<th>email</th>
+						<th>Phone</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td ><input type="checkbox" ></td>
+						<td contenteditable="true">San</td>
+						<td contenteditable="true">san@san.com</td>
+						<td contenteditable="true">1234567890</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" ></td>
+						<td contenteditable="true">nan</td>
+						<td contenteditable="true">nan@nan.com</td>
+						<td contenteditable="true">1234567890</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- Add friend  Popup Div Starts Here -->
+	<div id="addFriendPopup" >
+		<div id="popupContact">
+		<!-- Contact Us Form -->
+		<form action="#" id="form" method="post" name="form">
+		<img id="close" src="images/close.png" onclick ="div_hide()">
+		<h2>Add Friend</h2>
+		<hr><span id="headMsg"></span>
+		<input id="name" name="name" placeholder="Name" type="text">
+		<span id="nameMsg" ></span>
+		<input id="email" name="email" placeholder="Email" type="text">
+		<span id="emailMsg"></span>
+		<input id="contact" type="text" name="contact" placeholder="1234567890">
+		<span id="contactMsg"></span>
+		<!--<button id="add" onclick="javascript:addFriendWithValidation()">Add Friend</button>-->
+		<a href="javascript:addFriendWithValidation();" id="add">Add Friend</a>
+		</form>
+		</div>
+	</div>
+	<!-- Add friend Popup Div Ends Here -->
+	
+</body>
+<!-- Body Ends Here -->
+</html>
